@@ -2,7 +2,7 @@ import styled from "styled-components";
 import "./style.css";
 import List from "../list/List";
 import { inputTodo } from "../../redux/modules/todo";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
 function Form() {
@@ -28,7 +28,9 @@ function Form() {
     );
   };
   // console.log(todo);
-
+  // useEffect(() => {
+  //   alert("입력하세요");
+  // }, ([onSubmitHandler] = undefined));
   return (
     <>
       <StBox>

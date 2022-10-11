@@ -11,15 +11,7 @@ function Layout() {
   return (
     //<GlobalStyle>
 
-    <Header>
-      {/* <Layout>
-        <Form>
-          <List>
-            <Todo />
-          </List>
-        </Form>
-      </Layout> */}
-    </Header>
+    <Header />
 
     //</GlobalStyle>
   );

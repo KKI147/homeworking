@@ -42,8 +42,12 @@ const todo = (state = initialState, action) => {
     case CHANGE_TODO:
       const toggleState = {
         ...state,
-        todo: state.todo.map((todo) =>
-          todo.id === action.payload ? { ...todo, isDone: !todo.isDone } : todo
+        todo: state.todo.map(
+          (todo) =>
+            todo.id === action.payload
+              ? { ...todo, isDone: !todo.isDone }
+              : todo
+          // a : b
         ),
       };
       return toggleState;

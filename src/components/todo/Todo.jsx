@@ -6,8 +6,6 @@ function Todo({ id, title, body, isDone }) {
   //state 값 가져오기
   const todo = useSelector((state) => state.todo.todo);
   const dispatch = useDispatch();
-  // const isDone = todo.isDone;
-  // const [cancel, setcancel] = useState(todo.isDone);
 
   //id 값 기준
   const handleRemove = (id) => {
@@ -19,24 +17,18 @@ function Todo({ id, title, body, isDone }) {
     dispatch(changeTodo(id));
   };
 
-  // const toggleMenu = () => {
-  //   setcancel(!cancel);
-  //   todo.isDone = !todo.isDone;
-  // };
-
   return (
     <StBox>
       <div>
+        <span>상세페이지</span>
+
         <div>
           <h2 className="todoTitle">{title}</h2>
           <h3>{body}</h3>
         </div>
-        <div className="btnBox">
-          <StBtn onClick={() => handleRemove(id)}>삭제하기</StBtn>
-          <StBtn onClick={() => toggleMenu(id)}>
-            {isDone ? "완료" : "취소"}
-          </StBtn>
-        </div>
+
+        <StBtn onClick={() => handleRemove(id)}>삭제하기</StBtn>
+        <StBtn onClick={() => toggleMenu(id)}>{isDone ? "완료" : "취소"}</StBtn>
       </div>
     </StBox>
   );
