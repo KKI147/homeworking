@@ -1,14 +1,13 @@
 import styled from "styled-components";
 import { deleteTodo, changeTodo } from "../../redux/modules/todo";
 import { useSelector, useDispatch } from "react-redux";
-import { useState } from "react";
 
 function Todo({ id, title, body, isDone }) {
   //state 값 가져오기
   const todo = useSelector((state) => state.todo.todo);
-  console.log(todo);
   const dispatch = useDispatch();
-  const [cancel, setCancel] = useState(todo.isDone);
+  // const isDone = todo.isDone;
+  // const [cancel, setcancel] = useState(todo.isDone);
 
   //id 값 기준
   const handleRemove = (id) => {
@@ -16,29 +15,29 @@ function Todo({ id, title, body, isDone }) {
   };
 
   //boolean 값 기준
-  const toggleMenu = () => {
-    setCancel(!cancel);
-    todo.isDone = !todo.isDone;
+  const toggleMenu = (id) => {
+    dispatch(changeTodo(id));
   };
+
+  // const toggleMenu = () => {
+  //   setcancel(!cancel);
+  //   todo.isDone = !todo.isDone;
+  // };
 
   return (
     <StBox>
-      {isDone === true ? (
-        <div className="listWrapper">
-          <div>
-            <h2 className="todoTitle">{title}</h2>
-            <h3>{body}</h3>
-          </div>
-          <div className="btnBox">
-            <StBtn onClick={() => handleRemove(id)}>삭제하기</StBtn>
-            <StBtn onClick={() => toggleMenu(isDone)}>
-              {todo.isDone === true ? "취소" : "완료"}
-            </StBtn>
-          </div>
+      <div>
+        <div>
+          <h2 className="todoTitle">{title}</h2>
+          <h3>{body}</h3>
         </div>
-      ) : (
-        ""
-      )}
+        <div className="btnBox">
+          <StBtn onClick={() => handleRemove(id)}>삭제하기</StBtn>
+          <StBtn onClick={() => toggleMenu(id)}>
+            {isDone ? "완료" : "취소"}
+          </StBtn>
+        </div>
+      </div>
     </StBox>
   );
 }

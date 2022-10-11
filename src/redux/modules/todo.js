@@ -18,14 +18,7 @@ export const changeTodo = (payload) => {
 
 // 초기 상태값
 const initialState = {
-  todo: [
-    {
-      id: 0,
-      title: "왜 ",
-      body: "처음하는 것 같지?",
-      isDone: true,
-    },
-  ],
+  todo: [],
 };
 
 // 리듀서
@@ -47,13 +40,13 @@ const todo = (state = initialState, action) => {
         }),
       };
     case CHANGE_TODO:
-      return {
+      const toggleState = {
         ...state,
-        // isdone 값에 따라서 표시 해야하는데 change?
-        todo: state.todo.filter((todo) => {
-          return todo.isDone === true ? "취소" : "완료";
-        }),
+        todo: state.todo.map((todo) =>
+          todo.id === action.payload ? { ...todo, isDone: !todo.isDone } : todo
+        ),
       };
+      return toggleState;
     default:
       return state;
   }
