@@ -47,7 +47,8 @@ const ListWrap = styled.div`
 
   gap: 12px;
   margin: 10px auto;
-  background-color: green;
+  display: flex;
+  flex-wrap: wrap;
 `;
 
 const Work = styled.div`

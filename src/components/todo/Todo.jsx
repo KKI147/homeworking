@@ -20,7 +20,7 @@ function Todo({ id, title, body, isDone }) {
   return (
     <StBox>
       <div>
-        <span>상세페이지</span>
+        {/* <span>상세페이지</span> */}
 
         <div>
           <h2 className="todoTitle">{title}</h2>
