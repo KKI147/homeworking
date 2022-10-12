@@ -26,5 +26,6 @@ const StBox = styled.div`
   max-width: 1200px;
   min-width: 800px;
   margin: 10px auto;
-  background-color: white;
+  background: #333333;
+  color: white;
 `;

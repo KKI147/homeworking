@@ -11,13 +11,13 @@ const Page = () => {
   const navigate = useNavigate();
 
   function handleUseHistory() {
-    navigate("/"); // /test로 url 이동
+    navigate("/"); // /홈으로 url 이동
   }
   // 리덕스에서 떙기고
   const PageTodo = useSelector((state) => state.todo.todo);
   const { id } = useParams();
   // let todos = todo.find((data) => data.id === Number(id));
-  // const isDone = todos.isDone;
+
   // const location = useLocation();
   // const id = location.state.id;
 

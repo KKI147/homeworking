@@ -78,7 +78,7 @@ const StBox = styled.div`
   max-width: 1200px;
   min-width: 800px;
   margin: 10px auto;
-  background-color: white;
+  background: #333333;
 `;
 
 const InputGroup = styled.div`
@@ -101,7 +101,7 @@ const AddInput = styled.input`
 `;
 
 const AddForm = styled.form`
-  background-color: white;
+  background: #333333;
   border-radius: 12px;
   margin: 0 auto;
   display: flex;
@@ -111,15 +111,16 @@ const AddForm = styled.form`
   gap: 20px;
   width: 1200px;
   height: 80px;
+  color: white;
 `;
 
 const Btn = styled.button`
   border: none;
   height: 40px;
   border-radius: 10px;
-  background: #333333;
-  border-radius: 5px;
+  background: white;
+  border: 1px solid white;
   width: 140px;
-  color: #fff;
+  color: #333333;
   font-weight: 700;
 `;
