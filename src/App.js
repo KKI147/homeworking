@@ -1,6 +1,5 @@
 import * as React from "react";
 import { Reset } from "styled-reset";
-import Layout from "./components/layout/Layout";
 import "./App.css";
 
 function App() {
@@ -8,11 +7,8 @@ function App() {
     <Reset />
     <div>Hi, I'm an app!</div>
   </React.Fragment>;
-  return (
-    <>
-      <Layout />
-    </>
-  );
+
+  return;
 }
 
 export default App;

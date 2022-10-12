@@ -5,7 +5,7 @@ const INPUT_TODO = "INPUT_TODO";
 const DELETE_TODO = "DELETE_TODO";
 const CHANGE_TODO = "CHANGE_TODO";
 
-// action creator
+// action creator 액션객체를 반환하는 함수
 export const inputTodo = (payload) => {
   return { type: INPUT_TODO, payload };
 };
@@ -21,7 +21,7 @@ const initialState = {
   todo: [],
 };
 
-// 리듀서
+// 리듀서 요청사항을 받아서 처리하고 새로운 상태를 만들어 주는 함수
 const todo = (state = initialState, action) => {
   switch (action.type) {
     case INPUT_TODO:
