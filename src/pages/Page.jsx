@@ -22,7 +22,7 @@ const Page = () => {
   // const id = location.state.id;
 
   //useParams 가 문자열 숫자로 변환시킬 필요
-  let todos = PageTodo.find((todo) => todo.id === Number(id));
+  const todos = PageTodo.find((todo) => todo.id === Number(id));
   // const isDone = todos.isDone;isDone={isDone}
 
   // useEffect(() => {
