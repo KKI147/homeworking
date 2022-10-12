@@ -1,11 +1,7 @@
 import Layout from "../components/layout/Layout";
 
 const TotalList = () => {
-  return (
-    <>
-      <Layout />
-    </>
-  );
+  return <Layout />;
 };
 
 export default TotalList;

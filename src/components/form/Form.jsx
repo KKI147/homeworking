@@ -5,16 +5,17 @@ import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
 function Form() {
-  const [title, setTilte] = useState("");
+  const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
   const dispatch = useDispatch();
 
   const todo = useSelector((state) => state.todo.todo);
-  // console.log(todo);
+
   const onSubmitHandler = (e) => {
     e.preventDefault();
+
     // input value 초기화
-    setTilte("");
+    setTitle("");
     setBody("");
 
     if (title === "") return alert("제목을 입력하세요");
@@ -29,10 +30,7 @@ function Form() {
       })
     );
   };
-  // console.log(todo);
-  // useEffect(() => {
-  //   alert("입력하세요");
-  // }, [todo]);
+
   return (
     <>
       <StBox>
@@ -43,7 +41,7 @@ function Form() {
               type="text"
               value={title}
               onChange={(e) => {
-                setTilte(e.target.value);
+                setTitle(e.target.value);
               }}
             />
             <FormLabel>내용</FormLabel>

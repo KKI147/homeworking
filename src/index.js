@@ -14,7 +14,7 @@ root.render(
       <Routes>
         <Route path="/" element={<TotalList />}></Route>
         <Route path="/page/:id" element={<Page />}></Route>
-        <Route path="/page/" element={<Page />}></Route>
+        {/* <Route path="/page/" element={<Page />}></Route> */}
       </Routes>
     </BrowserRouter>
   </Provider>
