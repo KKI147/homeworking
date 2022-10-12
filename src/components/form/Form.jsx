@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import List from "../list/List";
 import { inputTodo } from "../../redux/modules/todo";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
 function Form() {
@@ -13,6 +13,9 @@ function Form() {
   // console.log(todo);
   const onSubmitHandler = (e) => {
     e.preventDefault();
+    // input value 초기화
+    setTilte("");
+    setBody("");
 
     if (title === "") return alert("제목을 입력하세요");
     if (body === "") return alert("내용을 입력하세요");
@@ -29,7 +32,7 @@ function Form() {
   // console.log(todo);
   // useEffect(() => {
   //   alert("입력하세요");
-  // }, ([onSubmitHandler] = undefined));
+  // }, [todo]);
   return (
     <>
       <StBox>
@@ -114,7 +117,8 @@ const Btn = styled.button`
   border: none;
   height: 40px;
   border-radius: 10px;
-  background-color: teal;
+  background: #333333;
+  border-radius: 5px;
   width: 140px;
   color: #fff;
   font-weight: 700;

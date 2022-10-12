@@ -44,17 +44,16 @@ export default List;
 
 const ListWrap = styled.div`
   max-width: 1200px;
-
   gap: 12px;
   margin: 10px auto;
-  display: flex;
-  flex-wrap: wrap;
 `;
 
 const Work = styled.div`
   display: inline-block;
   display: flex;
   align-items: center;
+  flex-flow: wrap;
+  gap: 20px;
 `;
 
 const ListBox = styled.div`
@@ -63,12 +62,12 @@ const ListBox = styled.div`
   display: flex;
   margin: 10px auto;
   font-size: 24px;
+  padding: 10px;
 `;
-{
-  /* 
+
+/* 
 key={todo.id}
                 id={todo.id}
                 title={todo.title}
                 body={todo.body}
                 isDone={todo.isDone} */
-}

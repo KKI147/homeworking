@@ -12,7 +12,6 @@ function Layout() {
     //<GlobalStyle>
 
     <Header />
-
     //</GlobalStyle>
   );
 }
